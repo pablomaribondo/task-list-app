@@ -16,4 +16,4 @@ As seguintes tecnologias foram utilizadas no desenvolvimento do projeto:
 [channel]: https://www.youtube.com/channel/UCS2UjgEPEybOx1toY7aKRJg
 [react]: https://reactjs.org/
 [react-redux]: https://react-redux.js.org/
-[firebase]: https://www.typescriptlang.org/
+[typescript]: https://www.typescriptlang.org/
