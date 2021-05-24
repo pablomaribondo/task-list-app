@@ -2,7 +2,7 @@
 
 ## 💻 Projeto
 
-Projeto desenvolvido com base no vídeo [Task List App - React and Redux with Typescript][plavideoylist], oferecido por [CodingFromScratch][channel].
+Projeto desenvolvido com base no vídeo [Task List App - React and Redux with Typescript][video], oferecido por [CodingFromScratch][channel].
 
 ## 🛠 Tecnologias
 
