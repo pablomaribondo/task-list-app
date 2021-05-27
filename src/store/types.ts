@@ -116,7 +116,7 @@ interface EditTaskAction {
 interface SetTaskToEditAction {
   type: typeof SET_TASK_TO_EDIT;
   payload: {
-    taskId: Task;
+    task: Task;
     list: List;
   };
 }
