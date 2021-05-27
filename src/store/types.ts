@@ -32,3 +32,103 @@ export interface List {
 export interface Lists {
   [id: string]: List;
 }
+
+interface AddListAction {
+  type: typeof ADD_LIST;
+  payload: List;
+}
+
+interface GetListsAction {
+  type: typeof GET_LISTS;
+}
+
+interface GetListByIdAction {
+  type: typeof GET_LIST_BY_ID;
+  payload: string;
+}
+
+interface SetListToDeleteAction {
+  type: typeof SET_LIST_TO_DELETE;
+  payload: string;
+}
+
+interface SetListToEditAction {
+  type: typeof SET_LIST_TO_EDIT;
+  payload: string;
+}
+
+interface DeleteListAction {
+  type: typeof DELETE_LIST;
+  payload: string;
+}
+
+interface UpdateListAction {
+  type: typeof UPDATE_LIST;
+  payload: {
+    id: string;
+    name: string;
+  };
+}
+
+interface SetSelectedListAction {
+  type: typeof SET_SELECTED_LIST;
+  payload: string;
+}
+
+interface AddTaskAction {
+  type: typeof ADD_TASK;
+  payload: {
+    task: Task;
+    list: List;
+  };
+}
+
+interface DeleteTaskAction {
+  type: typeof DELETE_TASK;
+  payload: {
+    task: Task;
+    list: List;
+  };
+}
+
+interface SetTaskToDeleteAction {
+  type: typeof SET_TASK_TO_DELETE;
+  payload: {
+    task: Task;
+    list: List;
+  };
+}
+
+interface UnsetTaskToDeleteAction {
+  type: typeof UNSET_TASK_TO_DELETE;
+}
+
+interface EditTaskAction {
+  type: typeof UPDATE_TASK;
+  payload: {
+    taskId: string;
+    taskName: string;
+    taskState: boolean;
+    list: List;
+  };
+}
+
+interface SetTaskToEditAction {
+  type: typeof SET_TASK_TO_EDIT;
+  payload: {
+    taskId: Task;
+    list: List;
+  };
+}
+
+interface UnsetTaskToEditAction {
+  type: typeof UNSET_TASK_TO_EDIT;
+}
+
+interface SetNotificationAction {
+  type: typeof SET_NOTIFICATION;
+  payload: {
+    message: string;
+    type: string;
+  };
+}
