@@ -1,6 +1,16 @@
 import { ListsAction, ListState } from '../types';
 
-export default (state, action: ListsAction): ListState => {
+const initialState: ListState = {
+  lists: {},
+  listToDelete: '',
+  listToEdit: null,
+  listById: null,
+  selectedList: null,
+  taskToDelete: null,
+  taskToEdit: null
+};
+
+export default (state = initialState, action: ListsAction): ListState => {
   switch (action.type) {
     default:
       return state;
