@@ -132,3 +132,22 @@ interface SetNotificationAction {
     type: string;
   };
 }
+
+export type ListsAction =
+  | AddListAction
+  | GetListsAction
+  | GetListByIdAction
+  | SetListToDeleteAction
+  | SetListToEditAction
+  | DeleteListAction
+  | UpdateListAction
+  | SetSelectedListAction
+  | AddTaskAction
+  | DeleteTaskAction
+  | SetTaskToDeleteAction
+  | UnsetTaskToDeleteAction
+  | EditTaskAction
+  | SetTaskToEditAction
+  | UnsetTaskToEditAction;
+
+export type NotificationAction = SetNotificationAction;
