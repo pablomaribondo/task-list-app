@@ -16,3 +16,19 @@ export const SET_TASK_TO_EDIT = 'SET_TASK_TO_EDIT';
 export const UNSET_TASK_TO_EDIT = 'UNSET_TASK_TO_EDIT';
 
 export const SET_NOTIFICATION = 'SET_NOTIFICATION';
+
+export interface Task {
+  id: string;
+  name: string;
+  completed: boolean;
+}
+
+export interface List {
+  id: string;
+  name: string;
+  tasks: Task[];
+}
+
+export interface Lists {
+  [id: string]: List;
+}
