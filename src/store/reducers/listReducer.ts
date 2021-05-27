@@ -10,6 +10,7 @@ const initialState: ListState = {
   taskToEdit: null
 };
 
+// eslint-disable-next-line default-param-last
 export default (state = initialState, action: ListsAction): ListState => {
   switch (action.type) {
     default:
