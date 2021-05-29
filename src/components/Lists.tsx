@@ -28,7 +28,7 @@ const Lists: FC = () => {
 
       <div>
         {Object.keys(lists).length === 0 ? (
-          <p className="py-4 has-centered-text">No Lists</p>
+          <p className="py-4 has-text-centered">No Lists</p>
         ) : (
           <div>
             {Object.values(lists).map((list: List) => {
