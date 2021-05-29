@@ -37,7 +37,7 @@ const CreateNewList: FC = () => {
       </div>
       <div className="card-content">
         <form onSubmit={submitHandler}>
-          <div className="filed">
+          <div className="field">
             <label htmlFor="" className="label">
               List Name
             </label>
