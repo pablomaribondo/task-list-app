@@ -1,10 +1,17 @@
 import { FC } from 'react';
+import { useSelector } from 'react-redux';
 import './App.css';
 
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
+import Notification from './components/Notification';
+import { RootState } from './store/store';
 
 const App: FC = () => {
+  const notificationMessage = useSelector(
+    (state: RootState) => state.notification.message
+  );
+
   return (
     <div className="App">
       <Header
@@ -13,8 +20,12 @@ const App: FC = () => {
       />
 
       <div className="container px-5">
-        <Sidebar />
+        <div className="columns">
+          <Sidebar />
+        </div>
       </div>
+
+      <Notification message={notificationMessage} />
     </div>
   );
 };

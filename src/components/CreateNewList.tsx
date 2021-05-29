@@ -2,7 +2,7 @@ import { FC, FormEvent, useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { List } from '../store/types';
-import { addList, setNotification } from '../store/actions'; // eslint-disable-line no-unused-vars
+import { addList, setNotification } from '../store/actions';
 
 const CreateNewList: FC = () => {
   const dispatch = useDispatch();
@@ -27,6 +27,7 @@ const CreateNewList: FC = () => {
     };
 
     dispatch(addList(newList));
+    dispatch(setNotification(`New list ["${newList.name}"] created!`));
     setListName('');
   };
 
