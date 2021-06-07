@@ -8,6 +8,7 @@ import Notification from './components/Notification';
 import { RootState } from './store/store';
 import DeleteListModal from './components/DeleteListModal';
 import EditListModal from './components/EditListModal';
+import MainContent from './components/MainContent';
 
 const App: FC = () => {
   const notificationMessage = useSelector(
@@ -28,6 +29,7 @@ const App: FC = () => {
       <div className="container px-5">
         <div className="columns">
           <Sidebar />
+          <MainContent />
         </div>
       </div>
 
