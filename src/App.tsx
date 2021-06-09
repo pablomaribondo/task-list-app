@@ -1,14 +1,16 @@
 import { FC } from 'react';
 import { useSelector } from 'react-redux';
+
 import './App.css';
 
+import { RootState } from './store/store';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Notification from './components/Notification';
-import { RootState } from './store/store';
 import DeleteListModal from './components/DeleteListModal';
 import EditListModal from './components/EditListModal';
 import MainContent from './components/MainContent';
+import EditTaskModal from './components/EditTaskModal';
 
 const App: FC = () => {
   const notificationMessage = useSelector(
@@ -18,6 +20,7 @@ const App: FC = () => {
     (state: RootState) => state.list.listToDelete
   );
   const listToEdit = useSelector((state: RootState) => state.list.listToEdit);
+  const taskToEdit = useSelector((state: RootState) => state.list.taskToEdit);
 
   return (
     <div className="App">
@@ -36,6 +39,7 @@ const App: FC = () => {
       <Notification message={notificationMessage} />
       {listToDelete && <DeleteListModal listId={listToDelete} />}
       {listToEdit && <EditListModal list={listToEdit} />}
+      {taskToEdit && <EditTaskModal taskToEdit={taskToEdit} />}
     </div>
   );
 };
