@@ -13,6 +13,12 @@ As seguintes tecnologias foram utilizadas no desenvolvimento do projeto:
 - [React Redux][react-redux]
 - [Typescript][typescript]
 
+## 📷 Screenshots
+
+<kbd>
+  <img src=".github/screenshot" alt="task-list-app" width="600" />
+</kbd>
+
 [bulma]: https://bulma.io/
 [channel]: https://www.youtube.com/channel/UCS2UjgEPEybOx1toY7aKRJg
 [react]: https://reactjs.org/
