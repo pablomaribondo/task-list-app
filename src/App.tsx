@@ -11,6 +11,7 @@ import DeleteListModal from './components/DeleteListModal';
 import EditListModal from './components/EditListModal';
 import MainContent from './components/MainContent';
 import EditTaskModal from './components/EditTaskModal';
+import DeleteTaskModal from './components/DeleteTaskModal';
 
 const App: FC = () => {
   const notificationMessage = useSelector(
@@ -21,12 +22,15 @@ const App: FC = () => {
   );
   const listToEdit = useSelector((state: RootState) => state.list.listToEdit);
   const taskToEdit = useSelector((state: RootState) => state.list.taskToEdit);
+  const taskToDelete = useSelector(
+    (state: RootState) => state.list.taskToDelete
+  );
 
   return (
     <div className="App">
       <Header
         title="Task List App"
-        subtitle="Create some lists and add some tasks tp each list"
+        subtitle="Create some lists and add some tasks to each list"
       />
 
       <div className="container px-5">
@@ -40,6 +44,7 @@ const App: FC = () => {
       {listToDelete && <DeleteListModal listId={listToDelete} />}
       {listToEdit && <EditListModal list={listToEdit} />}
       {taskToEdit && <EditTaskModal taskToEdit={taskToEdit} />}
+      {taskToDelete && <DeleteTaskModal taskToDelete={taskToDelete} />}
     </div>
   );
 };
