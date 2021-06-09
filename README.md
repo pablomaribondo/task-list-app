@@ -16,7 +16,7 @@ As seguintes tecnologias foram utilizadas no desenvolvimento do projeto:
 ## 📷 Screenshots
 
 <kbd>
-  <img src=".github/screenshot" alt="task-list-app" width="600" />
+  <img src=".github/screenshot.png" alt="task-list-app" width="600" />
 </kbd>
 
 [bulma]: https://bulma.io/
